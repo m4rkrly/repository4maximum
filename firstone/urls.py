@@ -16,10 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include 
-from app_lesson_4.views import domashka
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('add.urls')),
-    path('lesson_4/', domashka)
 ]
