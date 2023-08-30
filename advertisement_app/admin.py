@@ -5,7 +5,7 @@ from .models import Advertisement
 
 
 class AdminAdvertisement(admin.ModelAdmin):
-    list_display = ['id', 'title', 'description', 'price', 'auction', 'created_date', 'updated_date']
+    list_display = ['id', 'user', 'title', 'description', 'price', 'auction', 'created_date', 'updated_date', 'show_image']
     list_filter = ['auction', 'created_at']
     actions = ['auction_false', 'auction_true']
 
@@ -13,7 +13,7 @@ class AdminAdvertisement(admin.ModelAdmin):
         ('Основная информация'
          ,
          {
-             'fields':('title', 'description', 'price')
+             'fields':('user', 'title', 'description', 'price', 'image')
          }  
          
         ),
